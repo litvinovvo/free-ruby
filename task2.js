@@ -21,17 +21,17 @@ function isNumeric(n) {
     return !isNaN(parseInt(n)) && isFinite(n);
   }
 
-var args = process.argv.slice(2);
+var args = process.argv.slice(1);
 var n = args[0];
 
 if(!isNumeric(n)){
     process.stdout.write("please, enter integer number");
-    return    
+    process.exit();    
 }
 
 if(Math.abs(n) > 10000){
     process.stdout.write("number should be in range from -10000 to 10000");
-    return
+    process.exit();
 }
 
 var fnum = fib(parseInt(n));
