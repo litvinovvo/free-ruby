@@ -6,10 +6,10 @@ function fib(n) {
     if(n === 1 || n === 2 || n=== -1)return 1;
     if(n === -2)return -1;
 
-    var a = 1;
-    var b = 1;
-    var nAbs = Math.abs(n)
-    for (var i = 3; i <= nAbs; i++) {
+    let a = 1;
+    let b = 1;
+    const nAbs = Math.abs(n)
+    for (let i = 3; i <= nAbs; i++) {
       var c = a + b;
       a = b;
       b = c;
@@ -21,8 +21,8 @@ function isNumeric(n) {
     return !isNaN(parseInt(n)) && isFinite(n);
   }
 
-var args = process.argv.slice(1);
-var n = args[0];
+const args = process.argv.slice(1);
+const n = args[0];
 
 if(!isNumeric(n)){
     process.stdout.write("please, enter integer number");
@@ -34,6 +34,6 @@ if(Math.abs(n) > 10000){
     process.exit();
 }
 
-var fnum = fib(parseInt(n));
+const fnum = fib(parseInt(n));
 
 process.stdout.write(fnum.toString());

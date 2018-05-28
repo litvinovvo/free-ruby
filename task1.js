@@ -1,7 +1,7 @@
 /* Task 1 */
 
-var args = process.argv.slice(1);
-var str = args[0];
+const args = process.argv.slice(1);
+const str = args[0];
 
 if(str.length > 10000 || str.length < 1){
     process.stdout.write("string must contain from 1 to 10000 characters");
@@ -14,6 +14,6 @@ if(!/^[\x00-\x7F]*$/.test(str)){
 }
 
 
-var strClean = str.replace(/\W/gi,'').toLowerCase();
-var strReverse = strClean.split("").reverse().join("");
+const strClean = str.replace(/\W/gi,'').toLowerCase();
+const strReverse = strClean.split("").reverse().join("");
 strClean === strReverse ? process.stdout.write("YES") : process.stdout.write("NO");

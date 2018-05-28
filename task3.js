@@ -1,11 +1,11 @@
 /* Task 3 */
 
-var args = process.argv.slice(1);
-var str = args[0];
+const args = process.argv.slice(1);
+const str = args[0];
 
-var vowels = [];
-var consonants = [];
-var digits = [];
+const vowels = [];
+const consonants = [];
+const digits = [];
 
 
 if(str.length > 10000 || str.length < 1){
