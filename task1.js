@@ -3,7 +3,6 @@
 const args = process.argv.slice(2);
 const str = args[0];
 
-// console.log()
 if(!str){
     process.stdout.write("pass one ASCII string");
     process.exit();
