@@ -21,7 +21,7 @@ function isNumeric(n) {
     return !isNaN(parseInt(n)) && isFinite(n);
   }
 
-const args = process.argv.slice(1);
+const args = process.argv.slice(2);
 const n = args[0];
 
 if(!n){
