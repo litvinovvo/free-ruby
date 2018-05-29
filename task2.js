@@ -24,6 +24,11 @@ function isNumeric(n) {
 const args = process.argv.slice(1);
 const n = args[0];
 
+if(!n){
+    process.stdout.write("pass fibonacci number");
+    process.exit();    
+}
+
 if(!isNumeric(n)){
     process.stdout.write("please, enter integer number");
     process.exit();    
