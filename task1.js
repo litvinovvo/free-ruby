@@ -1,6 +1,6 @@
 /* Task 1 */
 
-const args = process.argv.slice(2);
+const args = process.argv.slice(1);
 const str = args[0];
 
 if (!str) {
