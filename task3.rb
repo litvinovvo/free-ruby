@@ -18,6 +18,7 @@ strArr = str.chars
 vowels = []
 consonants = []
 digits = []
+res = []
 
 strArr.each do |c|
     if (/[aeiou]/i).match?(c) then vowels.insert(-1,c) # pattern.match?(string) is 50% faster then "test123" =~ /1/
@@ -26,4 +27,9 @@ strArr.each do |c|
     end 
 end
 
-puts vowels.join + ' ' + consonants.join + ' ' + digits.join
+if(vowels.length > 0) then res.insert(-1,vowels.join) end
+if(consonants.length > 0)then res.insert(-1,consonants.join) end
+if(digits.length > 0)then res.insert(-1,digits.join) end
+
+
+puts res.join(" ")
