@@ -31,8 +31,8 @@ function isNumeric(n) {
     return !isNaN(parseInt(n)) && isFinite(n);
 }
 
-const args = process.argv.slice(1); // for geekbrains
-// const args = process.argv.slice(2); // for standard node.js env
+// const args = process.argv.slice(1); // for geekbrains
+const args = process.argv.slice(2); // for standard node.js env
 
 const n = args[0];
 
