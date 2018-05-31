@@ -10,13 +10,15 @@ n = ARGV[0]
 
 
 if n.nil? || !n.is_i?
-    abort("please, enter integer number")
+    exit
+    # abort("please, enter integer number")
 end
 
 n = n.to_i
 
 if n.abs > 10000
-    abort("number should be in range from -10000 to 10000")
+    exit
+    # abort("number should be in range from -10000 to 10000")
 end
 
 def fib(n) 
