@@ -34,7 +34,8 @@ def fib(n)
         a = b
         b = c
     end
-    return n < 0 ? ((-1)**(n+1))*b : b    
+    return b
+    # return n < 0 ? ((-1)**(n+1))*b : b    
 end
 
 puts fib(n)

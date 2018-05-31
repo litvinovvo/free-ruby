@@ -23,7 +23,8 @@ function fib(n) {
         a = b;
         b = c;
     }
-    return n < 0 ? Math.pow(-1, n + 1) * b : b;
+    // return n < 0 ? Math.pow(-1, n + 1) * b : b;
+    return b;
 }
 
 function isNumeric(n) {
