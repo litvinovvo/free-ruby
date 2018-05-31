@@ -1,38 +1,20 @@
-#  Task 3
-
 str = ARGV[0]
 
-if str.nil?
-    exit
-    # abort("pass one ASCII string")
-end
-
-if str.length < 1 || str.length > 10000
-    exit
-    #  abort("string must contain from 1 to 10000 characters")
-end
-
-if str.scan(/[^\u0000-\u007F]/).length > 0
-    exit
-    # abort("string must contain only ASCII characters")
-end
-
 strArr = str.chars
-vowels = []
-consonants = []
-digits = []
+v = []
+c = []
+d = []
 res = []
 
-strArr.each do |c|
-    if (/[aeiou]/i).match?(c) then vowels.insert(-1,c) # pattern.match?(string) is 50% faster then "test123" =~ /1/
-    elsif (/[bcdfghjklmnpqrstvwxyz]/i).match?(c) then consonants.insert(-1,c)
-    elsif (/[\d]/i).match?(c) then digits.insert(-1,c) 
+strArr.each do |l|
+    if (/[aeiou]/i).match?(l) then v.insert(-1,l)
+    elsif (/[bcdfghjklmnpqrstvwxyz]/i).match?(l) then c.insert(-1,l)
+    elsif (/[\d]/i).match?(l) then d.insert(-1,l) 
     end 
 end
 
-if(vowels.length > 0) then res.insert(-1,vowels.join) end
-if(consonants.length > 0)then res.insert(-1,consonants.join) end
-if(digits.length > 0)then res.insert(-1,digits.join) end
-
+if(v.length > 0) then res.insert(-1,v.join) end
+if(c.length > 0) then res.insert(-1,c.join) end
+if(d.length > 0) then res.insert(-1,d.join) end
 
 puts res.join(" ")
