@@ -14,7 +14,7 @@ function fib(n) {
     }
     return n < 0 ? Math.pow(-1, n + 1) * b : b;
 }
-const n = process.argv[2];
+const n = process.argv[1];
 
 const fnum = fib(parseInt(n));
 process.stdout.write(fnum.toString());

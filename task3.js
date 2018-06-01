@@ -1,4 +1,4 @@
-const str = process.argv[2]
+const str = process.argv[1]
 
 const v = [];
 const c = [];
