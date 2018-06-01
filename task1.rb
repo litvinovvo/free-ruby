@@ -1,6 +1,9 @@
 str = ARGV[0]
 
-strClean = str.gsub(/\W/i,'').downcase
-strReverse = strClean.reverse
+def checkPalindrome(str) 
+    strClean = str.gsub(/\W/i,'').downcase
+    strReverse = strClean.reverse
+    strReverse == strClean ? "YES" : "NO"
+end
 
-puts strReverse == strClean ? "YES" : "NO"
+puts checkPalindrome(str)
