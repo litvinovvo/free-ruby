@@ -1,7 +1,6 @@
 const args = process.argv;
 
 function fib(n) {
-
     if (Math.abs(n) < 2 ) return Math.abs(n);
 
     let a = 0;
@@ -14,6 +13,5 @@ function fib(n) {
     }
     return n < 0 ? Math.pow(-1, n + 1) * b : b;
 }
-const n = args[args.length - 1];
 
-process.stdout.write(fib(parseInt(n)).toString());
+if(args[2])process.stdout.write(fib(parseInt(args[2])).toString());
