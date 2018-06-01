@@ -1,4 +1,5 @@
 const args = process.argv;
+const str = args.slice(2).join(" ");
 
 function checkPalindrome(str){
     const strClean = str.replace(/[\W_]/gi, '').toLowerCase();
@@ -6,5 +7,4 @@ function checkPalindrome(str){
     return strClean === strReverse ? "YES" : "NO";
 }
 
-if(args.length > 2)process.stdout.write(checkPalindrome(args[2]));
-
+process.stdout.write(checkPalindrome(str));

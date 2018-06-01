@@ -1,18 +1,10 @@
-const str = process.argv[1]
-
-const v = [];
-const c = [];
-const d = [];
-
-str.split("").forEach(char => {
-    if (/[aeiou]/i.test(char)) v.push(char);
-    if (/[bcdfghjklmnpqrstvwxyz]/i.test(char)) c.push(char);
-    if (/[\d]/i.test(char)) d.push(char);
-});
+const args = process.argv;
+const str = args.slice(2).join(" ");
 
 const res = [];
-if(v.length > 0)res.push(v.join(""))
-if(c.length > 0)res.push(c.join(""))
-if(d.length > 0)res.push(d.join(""))
+
+if(str.match(/[aeiou]/ig))res.push(str.match(/[aeiou]/ig).join(""))
+if(str.match(/[bcdfghjklmnpqrstvwxyz]/ig))res.push(str.match(/[bcdfghjklmnpqrstvwxyz]/ig).join(""))
+if(str.match(/[\d]/ig))res.push(str.match(/[\d]/ig).join(""))
 
 process.stdout.write(res.join(" "));
