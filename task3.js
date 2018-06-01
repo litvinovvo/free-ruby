@@ -1,10 +1,10 @@
-// const args = process.argv;
-// const str = args.slice(2).join(" ");
+const args = process.argv;
+const str = args.slice(2).join(" ");
 
-// const res = [];
+const res = [];
 
-// if(str.match(/[aeiou]/ig))res.push(str.match(/[aeiou]/ig).join(""))
-// if(str.match(/[bcdfghjklmnpqrstvwxyz]/ig))res.push(str.match(/[bcdfghjklmnpqrstvwxyz]/ig).join(""))
-// if(str.match(/[\d]/ig))res.push(str.match(/[\d]/ig).join(""))
+if(str.match(/[aeiou]/ig))res.push(str.match(/[aeiou]/ig).join(""))
+if(str.match(/[bcdfghjklmnpqrstvwxyz]/ig))res.push(str.match(/[bcdfghjklmnpqrstvwxyz]/ig).join(""))
+if(str.match(/[\d]/ig))res.push(str.match(/[\d]/ig).join(""))
 
-// if(str.length > 0)process.stdout.write(res.join(" "));
+if(str.length > 0)process.stdout.write(res.join(" "));
