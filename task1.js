@@ -1,5 +1,5 @@
 const args = process.argv;
-const str = args.slice(2).join(" ");
+const str = args.slice(1).join(" ");
 
 function isPalindrome(str){
     const strClean = str.replace(/[\W_]/gi, '').toLowerCase();
